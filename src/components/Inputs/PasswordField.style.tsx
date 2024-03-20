@@ -8,5 +8,5 @@ export const PasswordStyle = styled.input`
   background-color: transparent;
   color: #E6E5EA;
   font-size: 1.5rem;
-  border: 1px solid red;
+  font-weight: bold;
 `
