@@ -4,6 +4,10 @@
   --font-color: #E6E5EA;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   width: 100%;

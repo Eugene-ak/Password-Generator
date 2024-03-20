@@ -1,3 +1,5 @@
+import Checkbox from "./Checkbox";
+
 export default function InputElements() {
   return (
     <div>
@@ -7,14 +9,10 @@ export default function InputElements() {
         <input type="range" name="passwordLength" />
       </div>
       <div>
-        <input type="checkbox" name="uppercase" />
-        <label htmlFor="uppercase">Include Uppercase Letters</label>
-        <input type="checkbox" name="lowercase" />
-        <label htmlFor="lowercase">Include Lowercase Letters</label>
-        <input type="checkbox" name="numbers" />
-        <label htmlFor="numbers">Include Numbers</label>
-        <input type="checkbox" name="symbols" />
-        <label htmlFor="symbols">Include Symbols</label>
+        <Checkbox name="uppercase" displayText="Include Uppercase Letters"/>
+        <Checkbox name="lowercase" displayText="Include Lowercase Letters"/>
+        <Checkbox name="numbers" displayText="Include Numbers"/>
+        <Checkbox name="symbols" displayText="Include Symbols"/>
       </div>
     </div>
   );

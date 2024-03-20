@@ -1,11 +1,11 @@
-import Card from "./components/Card";
+import AppCard from "./components/Cards/AppCard";
 import Header from "./components/Headings/Header";
 
 function App() {
   return (
     <>
       <Header />
-      <Card />
+      <AppCard />
     </>
   );
 }

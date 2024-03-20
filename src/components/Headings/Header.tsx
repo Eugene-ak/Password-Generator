@@ -1,5 +1,7 @@
+import { StyledHeader } from "./Header.style";
+
 export default function Header() {
   return (
-    <h4>Password Generator</h4>
+    <StyledHeader>Password Generator</StyledHeader>
   )
 }
