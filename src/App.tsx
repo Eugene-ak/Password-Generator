@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ButtonIcon from "./assets/images/icon-arrow-right.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <h4>Password Generator</h4>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <input type="text" value={"Password"} />
+        <button>Copy</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div>
+        <span>Character length</span>
+        <span>10</span>
+        <input type="range" name="passwordLength" />
+        <input type="checkbox" name="uppercase" />
+        <label htmlFor="uppercase">Include Uppercase Letters</label>
+        <input type="checkbox" name="lowercase" />
+        <label htmlFor="lowercase">Include Lowercase Letters</label>
+        <input type="checkbox" name="numbers" />
+        <label htmlFor="numbers">Include Numbers</label>
+        <input type="checkbox" name="symbols" />
+        <label htmlFor="symbols">Include Symbols</label>
+
+        <div>
+          <span>Strength</span>
+          <span>Medium</span>
+          <span>|</span>
+          <span>|</span>
+          <span>|</span>
+          <span>|</span>
+        </div>
+        <button>Generate -&gt;</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
