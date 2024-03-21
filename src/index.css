@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@font-face {
+  font-family: JetBrainsMono-Bold;
+  src: url(./assets/fonts/static/JetBrainsMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: JetBrainsMono-BoldItalic;
+  src: url(./assets/fonts/static/JetBrainsMono-BoldItalic.ttf);
+}
 
 :root {
   --app-background: #18171F;
-  --card-color: #24232C;
-  --font-color: #E6E5EA;
-  --primary-font: "JetBrains Mono", monospace;
+  --secondary-background: #817D92;
+  --card-background: #24232C;
+  --app-white: #E6E5EA;
+  --app-green: #A4FFAF;
+  --app-red: #F64A4A;
+  --app-orange: #FB7C58;
+  --app-yellow: #F8CD65;
+  --primary-font: JetBrainsMono-Bold;
+  --secondary-font: JetBrainsMono-BoldItalic;
 }
 
 * {
