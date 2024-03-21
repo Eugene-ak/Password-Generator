@@ -6,7 +6,7 @@ export const PasswordStyle = styled.input`
   height: 100%;
   padding: 0.5rem;
   background-color: transparent;
-  color: #E6E5EA;
+  color: var(--secondary-background);
   font-size: 1.5rem;
   font-weight: bold;
 `
