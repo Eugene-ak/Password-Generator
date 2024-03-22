@@ -9,7 +9,7 @@ export const CheckboxContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
-`
+`;
 
 export const CheckboxStyle = styled.input`
   -webkit-appearance: none;
@@ -21,22 +21,28 @@ export const CheckboxStyle = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+
+  &:hover,
+  &:active,
+  &:target,
+  &:focus-visible {
+    border: 1px solid var(--app-green);
+    outline: none;
+  }
+
+  &:checked {
+    background-color: var(--app-green);
+  }
 
   &::after {
-    /* content: url(../../assets/images/icon-check.svg); */
-    content: " ";
-    /* background-image: url(../../assets/images/icon-check.svg); */
-    background-image: ${CheckIcon};
-    /* content: "h"; */
+    content: url(${CheckIcon});
     width: 100%;
     height: 100%;
-    /* background-color: red; */
-    font-size: 1em;
-    /* color: white; */
   }
-`
+`;
 
 export const CheckboxLabel = styled.label`
   font-family: var(--secondary-font);
   color: var(--app-white);
-`
+`;
