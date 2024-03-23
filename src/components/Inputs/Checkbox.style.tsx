@@ -33,6 +33,7 @@ export const CheckboxStyle = styled.input`
 
   &:checked {
     background-color: var(--app-green);
+    border: 1px solid var(--app-green);
   }
 
   &::after {

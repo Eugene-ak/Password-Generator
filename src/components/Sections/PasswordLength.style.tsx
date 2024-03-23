@@ -31,21 +31,22 @@ export const RangeStyle = styled.input`
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: #a4ffaf;
+    background-color: var(--app-white);
     width: 30px;
     height: 30px;
-    border: 3px solid #a4ffaf;
     border-radius: 50%;
     cursor: pointer;
-
+    
     &:hover {
       background-color: var(--app-background);
+      border: 3px solid var(--app-green);
     }
   }
-
+  
   &:hover {
     &::-webkit-slider-thumb {
       background-color: var(--app-background);
+      border: 3px solid var(--app-green); 
     }
   }
 `;

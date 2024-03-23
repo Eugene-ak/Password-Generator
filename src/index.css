@@ -8,6 +8,16 @@
   src: url(./assets/fonts/static/JetBrainsMono-BoldItalic.ttf);
 }
 
+@font-face {
+  font-family: JetBrainsMono-Italic;
+  src: url(./assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(./assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
 :root {
   --app-background: #18171F;
   --secondary-background: #817D92;
@@ -17,8 +27,10 @@
   --app-red: #F64A4A;
   --app-orange: #FB7C58;
   --app-yellow: #F8CD65;
-  --primary-font: JetBrainsMono-Bold;
-  --secondary-font: JetBrainsMono-BoldItalic;
+  --primary-font: JetBrainsMono;
+  --bold-font: JetBrainsMono-Bold;
+  --italic-font: JetBrainsMono-Italic;
+  --bold-italic-font: JetBrainsMono-BoldItalic;
 }
 
 * {
