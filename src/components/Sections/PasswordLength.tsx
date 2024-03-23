@@ -12,7 +12,7 @@ export default function PasswordLength() {
   const range = useRef(null);
 
   const updateRangeValue = () => {
-    setRangeValue(range?.current.value);
+    setRangeValue(range.current.value);
   };
 
   return (
@@ -29,7 +29,6 @@ export default function PasswordLength() {
         min={0}
         max={20}
         value={rangeValue}
-        defaultValue={0}
         onChange={updateRangeValue}
         ref={range}
       />
