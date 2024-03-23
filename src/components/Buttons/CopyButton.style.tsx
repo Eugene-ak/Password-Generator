@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CopyButtonStyle = styled.button`
-  width: 20%;
+  width: max-content;
   height: 100%;
   background-color: transparent;
   border: none;
@@ -11,4 +11,12 @@ export const CopyButtonStyle = styled.button`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-`
+  gap: 1rem;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+`;
+
+export const CopiedText = styled.span`
+  font-size: 0.9rem;
+  display: none;
+`;

@@ -1,10 +1,11 @@
-import Arrow from "../../assets/images/icon-arrow-right.svg";
-import { GenerateBtn } from "./GenerateButton.style";
+import ArrowIcon from "../Icons/ArrowIcon";
+import { GenerateBtn, GenerateText } from "./GenerateButton.style";
 
 export default function GenerateButton() {
   return (
-    <GenerateBtn>Generate
-      <img src={Arrow} alt="" />
+    <GenerateBtn>
+      <GenerateText>Generate</GenerateText>
+      <ArrowIcon />
     </GenerateBtn>
   )
 }
