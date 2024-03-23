@@ -50,3 +50,8 @@ export const RangeStyle = styled.input`
     }
   }
 `;
+
+export const RangeValueStyle = styled.span`
+  color: var(--app-green);
+  font-size: 1.5rem;
+`
