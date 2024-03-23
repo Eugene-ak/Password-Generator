@@ -15,10 +15,16 @@ export const GenerateBtn = styled.button`
   justify-content: center;
   gap: 1rem;
 
-  &:hover, &:hover svg path {
+  &:hover, &:focus, &:focus-visible {
     background-color: transparent;
     border: 1px solid var(--app-green);
     color: var(--app-green);
+    fill: var(--app-green);
+    outline: none;
+  }
+
+  &:hover > svg {
+    filter: invert(50%);
   }
 `;
 

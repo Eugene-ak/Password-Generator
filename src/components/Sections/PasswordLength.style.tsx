@@ -37,16 +37,21 @@ export const RangeStyle = styled.input`
     border-radius: 50%;
     cursor: pointer;
     
-    &:hover {
+    &:hover, &:focus-visible {
       background-color: var(--app-background);
       border: 3px solid var(--app-green);
     }
   }
   
-  &:hover {
+  &:hover, &:focus-visible {
     &::-webkit-slider-thumb {
       background-color: var(--app-background);
       border: 3px solid var(--app-green); 
     }
   }
 `;
+
+export const RangeValueStyle = styled.span`
+  color: var(--app-green);
+  font-size: 1.5rem;
+`

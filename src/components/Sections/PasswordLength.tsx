@@ -1,13 +1,38 @@
-import { LengthDetails, PassLengthStyle, RangeStyle } from "./PasswordLength.style";
+import { useRef, useState } from "react";
+import {
+  LengthDetails,
+  PassLengthStyle,
+  RangeStyle,
+  RangeValueStyle,
+} from "./PasswordLength.style";
 
 export default function PasswordLength() {
+
+  const [rangeValue, setRangeValue] = useState(0);
+  const range = useRef(null);
+
+  const updateRangeValue = () => {
+    setRangeValue(range.current.value);
+  };
+
   return (
     <PassLengthStyle>
+
       <LengthDetails>
         <span>Character Length</span>
-        <span>10</span>
+        <RangeValueStyle>{rangeValue}</RangeValueStyle>
       </LengthDetails>
-      <RangeStyle type="range" name="passwordLength" min={0} max={20} />
+
+      <RangeStyle
+        type="range"
+        name="passwordLength"
+        min={0}
+        max={20}
+        value={rangeValue}
+        onChange={updateRangeValue}
+        ref={range}
+      />
+
     </PassLengthStyle>
   );
 }

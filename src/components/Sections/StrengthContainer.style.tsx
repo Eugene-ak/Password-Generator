@@ -9,6 +9,7 @@ export const StrengthContainerSection = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: var(--app-background);
+  font-family: var(--bold-font);
 `;
 
 export const StrengthText = styled.span`
@@ -26,9 +27,8 @@ export const StrengthIndicators = styled.span`
   & > :nth-child(-n+4) {
     width: 5px;
     height: 100%;
-    color: red;
-    background-color: red;
     margin: 0 0.2rem;
+    cursor: default;
   }
 
   & > :nth-child(1) {
