@@ -10,8 +10,8 @@ export default function StrengthContainer() {
     <StrengthContainerSection>
       <StrengthText>Strength</StrengthText>
       <div>
-        <StrengthLabel>Medium</StrengthLabel>
-        <StrengthIndicators>
+        <StrengthLabel>Too weak!</StrengthLabel>
+        <StrengthIndicators className="strong">
           <span>|</span>
           <span>|</span>
           <span>|</span>

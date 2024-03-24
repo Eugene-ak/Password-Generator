@@ -1,14 +1,14 @@
 import GenerateButton from "../Buttons/GenerateButton";
-import InputElements from "../Inputs/InputElements";
 import StrengthContainer from "./StrengthContainer";
 import { BottomSectionDiv } from "./BottomSection.style";
 import PasswordLength from "./PasswordLength";
+import Checkbox from "../Inputs/Checkbox";
 
 export default function BottomSection() {
   return (
     <BottomSectionDiv>
       <PasswordLength />
-      <InputElements />
+      <Checkbox />
       <StrengthContainer />
       <GenerateButton />
     </BottomSectionDiv>

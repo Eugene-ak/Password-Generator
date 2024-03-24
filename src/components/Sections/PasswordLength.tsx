@@ -9,10 +9,10 @@ import {
 export default function PasswordLength() {
 
   const [rangeValue, setRangeValue] = useState(0);
-  const range = useRef(null);
+  const range = useRef<number | string | undefined>(0);
 
   const updateRangeValue = () => {
-    setRangeValue(range.current.value);
+    setRangeValue(range.current?.value);
   };
 
   return (
