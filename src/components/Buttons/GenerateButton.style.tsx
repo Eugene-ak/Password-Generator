@@ -24,7 +24,10 @@ export const GenerateBtn = styled.button`
   }
 
   &:hover > svg {
-    filter: invert(50%);
+    filter: invert(10%);
+    /* filter: brightness(1.1); */
+    /* filter: saturate(100%); */
+    /* filter: hue-rotate(90deg); */
   }
 `;
 

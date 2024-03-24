@@ -5,8 +5,17 @@ export const CheckboxContainer = styled.div`
   width: 100%;
   padding: 0.5rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+`;
+
+export const CheckboxDiv = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;
   gap: 1rem;
 `;
