@@ -10,4 +10,8 @@ export const TopSectionDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 580px) {
+    padding: 1rem;
+  }
 `

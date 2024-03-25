@@ -1,7 +1,9 @@
 import { PasswordStyle } from "./PasswordField.style";
 
-export default function PasswordField() {
-  return (
-    <PasswordStyle type="text" value={"Password"} readOnly />
-  )
+export default function PasswordField({
+  passwordValue,
+}: {
+  passwordValue: string;
+}) {
+  return <PasswordStyle type="text" value={passwordValue} placeholder={"Password"} readOnly />;
 }

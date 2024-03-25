@@ -1,11 +1,11 @@
 import CopyButton from "../Buttons/CopyButton"
-import PasswordField from "../Inputs/PasswordField"
+// import PasswordField from "../Inputs/PasswordField"
 import { TopSectionDiv } from "./TopSection.style"
 
 export default function TopSection() {
   return (
     <TopSectionDiv>
-      <PasswordField />
+      {/* <PasswordField /> */}
       <CopyButton />
     </TopSectionDiv>
   )

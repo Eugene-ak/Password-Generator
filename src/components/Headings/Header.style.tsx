@@ -7,4 +7,8 @@ export const StyledHeader = styled.h4`
   align-items: center;
   justify-content: center;
   color: #817D92;
+
+  @media screen and (max-width: 580px) {
+    width: 343px;
+  }
 `

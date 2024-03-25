@@ -1,9 +1,9 @@
-import GenerateButton from "../Buttons/GenerateButton";
+// import GenerateButton from "../Buttons/GenerateButton";
 import StrengthContainer from "./StrengthContainer";
 import { BottomSectionDiv } from "./BottomSection.style";
-import PasswordLength from "./PasswordLength";
+// import PasswordLength from "./PasswordLength";
 import Checkbox from "../Inputs/Checkbox";
-import { MutableRefObject, useEffect, useRef, useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 
 export default function BottomSection() {
   const uppercaseCheck: MutableRefObject<HTMLInputElement | null> = useRef(null);
@@ -12,10 +12,6 @@ export default function BottomSection() {
   const symbolsCheck = useRef<HTMLInputElement | null>(null);
 
   const [checkedStateCount, setCheckedStateCount] = useState<number>(0);
-
-  useEffect(() => {
-    console.log(checkedStateCount);
-  }, [checkedStateCount]);
 
   const toggleUpperCaseCheck = () => {
     if (uppercaseCheck.current?.checked === true) {
@@ -51,7 +47,7 @@ export default function BottomSection() {
 
   return (
     <BottomSectionDiv>
-      <PasswordLength />
+      {/* <PasswordLength /> */}
       <Checkbox
         name="uppercase"
         id="uppercase"
@@ -81,7 +77,7 @@ export default function BottomSection() {
         text="Symbols"
       />
       <StrengthContainer count={checkedStateCount} />
-      <GenerateButton />
+      {/* <GenerateButton /> */}
     </BottomSectionDiv>
   );
 }
