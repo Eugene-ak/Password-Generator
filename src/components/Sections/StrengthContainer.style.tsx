@@ -43,7 +43,7 @@ export const StrengthIndicators = styled.span`
         ? "var(--app-yellow)"
         : props.className === "strong"
         ? "var(--app-green)"
-        : "var(--app-red)"};
+        : "transparent"};
     background-color: ${(props) =>
       props.className === "weakest"
         ? "var(--app-red)"
@@ -53,7 +53,7 @@ export const StrengthIndicators = styled.span`
         ? "var(--app-yellow)"
         : props.className === "strong"
         ? "var(--app-green)"
-        : "var(--app-red)"};
+        : "transparent"};
     border: 1px solid
       ${(props) =>
         props.className === "weakest"
@@ -64,7 +64,7 @@ export const StrengthIndicators = styled.span`
           ? "var(--app-yellow)"
           : props.className === "strong"
           ? "var(--app-green)"
-          : "var(--app-red)"};
+          : "var(--app-white)"};
   }
 
   & > :nth-child(2) {

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { MutableRefObject } from "react";
 import {
   CheckboxContainer,
   CheckboxDiv,
@@ -6,56 +6,32 @@ import {
   CheckboxStyle,
 } from "./Checkbox.style";
 
-export default function Checkbox() {
-  const uppercaseCheck = useRef(null);
-  const lowercaseCheck = useRef(null);
-  const numbersCheck = useRef(null);
-  const symbolsCheck = useRef(null);
-
+export default function Checkbox({
+  name,
+  id,
+  refValue,
+  onChange,
+  text
+}: {
+  name: string;
+  id: string;
+  refValue: MutableRefObject<HTMLInputElement | null>;
+  onChange: VoidFunction;
+  text: string;
+}) {
   return (
     <CheckboxContainer>
       <CheckboxDiv>
         <CheckboxStyle
           type="checkbox"
-          name="uppercase"
-          id="uppercase"
-          ref={uppercaseCheck}
+          name={name}
+          id={id}
+          ref={refValue}
+          onChange={onChange}
         />
-        <CheckboxLabel htmlFor="uppercase">
-          Include Uppercase Letters
+        <CheckboxLabel htmlFor={id}>
+          Include {text}
         </CheckboxLabel>
-      </CheckboxDiv>
-
-      <CheckboxDiv>
-        <CheckboxStyle
-          type="checkbox"
-          name="lowercase"
-          id="lowercase"
-          ref={lowercaseCheck}
-        />
-        <CheckboxLabel htmlFor="lowercase">
-          Include Lowercase Letters
-        </CheckboxLabel>
-      </CheckboxDiv>
-
-      <CheckboxDiv>
-        <CheckboxStyle
-          type="checkbox"
-          name="numbers"
-          id="numbers"
-          ref={numbersCheck}
-        />
-        <CheckboxLabel htmlFor="numbers">Include Numbers</CheckboxLabel>
-      </CheckboxDiv>
-
-      <CheckboxDiv>
-        <CheckboxStyle
-          type="checkbox"
-          name="symbols"
-          id="symbols"
-          ref={symbolsCheck}
-        />
-        <CheckboxLabel htmlFor="symbols">Include Symbols</CheckboxLabel>
       </CheckboxDiv>
     </CheckboxContainer>
   );
