@@ -9,4 +9,8 @@ export const PasswordStyle = styled.input`
   color: var(--secondary-background);
   font-size: 1.5rem;
   font-weight: bold;
+
+  @media screen and (max-width: 580px) {
+    font-size: 1.1rem;
+  }
 `

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { MutableRefObject } from "react";
 import {
   LengthDetails,
   PassLengthStyle,
@@ -6,18 +6,17 @@ import {
   RangeValueStyle,
 } from "./PasswordLength.style";
 
-export default function PasswordLength() {
-
-  const [rangeValue, setRangeValue] = useState(0);
-  const range = useRef<number | string | undefined>(0);
-
-  const updateRangeValue = () => {
-    setRangeValue(range.current?.value);
-  };
-
+export default function PasswordLength({
+  range,
+  rangeValue,
+  updateFunction,
+}: {
+  range: MutableRefObject<HTMLInputElement | null>;
+  rangeValue: string | undefined;
+  updateFunction: VoidFunction;
+}) {
   return (
     <PassLengthStyle>
-
       <LengthDetails>
         <span>Character Length</span>
         <RangeValueStyle>{rangeValue}</RangeValueStyle>
@@ -29,10 +28,9 @@ export default function PasswordLength() {
         min={0}
         max={20}
         value={rangeValue}
-        onChange={updateRangeValue}
+        onChange={updateFunction}
         ref={range}
       />
-
     </PassLengthStyle>
   );
 }
