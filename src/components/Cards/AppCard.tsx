@@ -87,32 +87,11 @@ export default function AppCard() {
     setRangeValue(range.current?.value);
   };
 
-  const toggleUpperCaseCheck = () => {
-    if (uppercaseCheck.current?.checked === true) {
-      setCheckedStateCount((prevState) => prevState + 1);
-    } else {
-      setCheckedStateCount((prevState) => prevState - 1);
-    }
-  };
-
-  const toggleLowerCaseCheck = () => {
-    if (lowercaseCheck.current?.checked === true) {
-      setCheckedStateCount((prevState) => prevState + 1);
-    } else {
-      setCheckedStateCount((prevState) => prevState - 1);
-    }
-  };
-
-  const toggleNumbersCheck = () => {
-    if (numbersCheck.current?.checked === true) {
-      setCheckedStateCount((prevState) => prevState + 1);
-    } else {
-      setCheckedStateCount((prevState) => prevState - 1);
-    }
-  };
-
-  const toggleSymbolsCheck = () => {
-    if (symbolsCheck.current?.checked === true) {
+  // Function to determine strength state and type of values to include in password
+  const updateCheckCount = (
+    name: MutableRefObject<HTMLInputElement | null>
+  ) => {
+    if (name.current?.checked === true) {
       setCheckedStateCount((prevState) => prevState + 1);
     } else {
       setCheckedStateCount((prevState) => prevState - 1);
@@ -299,16 +278,8 @@ export default function AppCard() {
               Math.floor(Math.random() * lowercaseLetters.length)
             ]
           );
-          newArray.push(
-            numbers[
-              Math.floor(Math.random() * numbers.length)
-            ]
-          );
-          newArray.push(
-            symbols[
-              Math.floor(Math.random() * symbols.length)
-            ]
-          );
+          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
         } else if (
           uppercaseCheck.current?.checked &&
           lowercaseCheck.current?.checked &&
@@ -325,23 +296,16 @@ export default function AppCard() {
               Math.floor(Math.random() * lowercaseLetters.length)
             ]
           );
-          newArray.push(
-            numbers[
-              Math.floor(Math.random() * numbers.length)
-            ]
-          );
-          newArray.push(
-            symbols[
-              Math.floor(Math.random() * symbols.length)
-            ]
-          );
+          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
         }
       }
 
-      const newPassword = shuffleArray(newArray).join("");
-      
-      if (password.length > passLength) {
-        setPassword(newPassword.slice(0, passLength).toString());
+      let newPassword = shuffleArray(newArray).join("");
+
+      if (newPassword.length > passLength) {
+        newPassword = newPassword.slice(0, passLength).toString();
+        setPassword(newPassword);
       }
       setPassword(newPassword);
     }
@@ -363,28 +327,28 @@ export default function AppCard() {
           name="uppercase"
           id="uppercase"
           refValue={uppercaseCheck}
-          onChange={toggleUpperCaseCheck}
+          onChange={() => updateCheckCount(uppercaseCheck)}
           text="Uppercase Letters"
         />
         <Checkbox
           name="lowercase"
           id="lowercase"
           refValue={lowercaseCheck}
-          onChange={toggleLowerCaseCheck}
+          onChange={() => updateCheckCount(lowercaseCheck)}
           text="Lowercase Letters"
         />
         <Checkbox
           name="mumbers"
           id="numbers"
           refValue={numbersCheck}
-          onChange={toggleNumbersCheck}
+          onChange={() => updateCheckCount(numbersCheck)}
           text="Numbers"
         />
         <Checkbox
           name="symbols"
           id="symbols"
           refValue={symbolsCheck}
-          onChange={toggleSymbolsCheck}
+          onChange={() => updateCheckCount(symbolsCheck)}
           text="Symbols"
         />
         <StrengthContainer count={checkedStateCount} />
