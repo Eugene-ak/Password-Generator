@@ -24,11 +24,11 @@ export const GenerateBtn = styled.button`
   }
   
   &:hover > svg {
-    filter: invert(10%);
+    /* filter: invert(10%); */
     fill: var(--app-green);
-    /* filter: brightness(1.1); */
+    filter: brightness(150%);
     /* filter: saturate(100%); */
-    /* filter: hue-rotate(90deg); */
+    filter: hue-rotate(180deg);
   }
 `;
 

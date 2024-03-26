@@ -5,7 +5,7 @@ export const CopyButtonStyle = styled.button`
   height: 100%;
   background-color: transparent;
   border: none;
-  color: #A4FFAF;
+  color: var(--app-green);
   font-size: 1rem;
   display: flex;
   flex-direction: row;
