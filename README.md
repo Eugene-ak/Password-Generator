@@ -30,16 +30,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Eugene-ak/Password-Generator.git)
+- Solution URL: [GitHub - https://github.com/Eugene-ak/Password-Generator.git](https://github.com/Eugene-ak/Password-Generator.git)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
-- Mobile-first workflow
-- Vite
 - Typescript
+- [Vite](https://vitejs.dev/guide/)
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
 

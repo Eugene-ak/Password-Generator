@@ -112,193 +112,217 @@ export default function AppCard() {
       const newArray = [];
 
       for (let i = 1; i <= passLength; i++) {
-        if (
-          uppercaseCheck.current?.checked &&
-          !lowercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
+        if (uppercaseCheck.current?.checked) {
           newArray.push(
             uppercaseLetters[
               Math.floor(Math.random() * uppercaseLetters.length)
             ]
           );
-        } else if (
-          lowercaseCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
+        }
+
+        if (lowercaseCheck.current?.checked) {
           newArray.push(
             lowercaseLetters[
               Math.floor(Math.random() * lowercaseLetters.length)
             ]
           );
-        } else if (
-          numbersCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !lowercaseCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
+        }
+
+        if (numbersCheck.current?.checked) {
           newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-        } else if (
-          symbolsCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked &&
-          !lowercaseCheck.current?.checked
-        ) {
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          lowercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-        } else if (
-          uppercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          !lowercaseCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !lowercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          lowercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-        } else if (
-          lowercaseCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !numbersCheck.current?.checked
-        ) {
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          numbersCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !uppercaseCheck.current?.checked &&
-          !lowercaseCheck.current?.checked
-        ) {
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          lowercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          !symbolsCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          lowercaseCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !numbersCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !lowercaseCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          lowercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          symbolsCheck.current?.checked &&
-          !uppercaseCheck.current?.checked
-        ) {
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
-          newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
-        } else if (
-          uppercaseCheck.current?.checked &&
-          lowercaseCheck.current?.checked &&
-          numbersCheck.current?.checked &&
-          symbolsCheck.current?.checked
-        ) {
-          newArray.push(
-            uppercaseLetters[
-              Math.floor(Math.random() * uppercaseLetters.length)
-            ]
-          );
-          newArray.push(
-            lowercaseLetters[
-              Math.floor(Math.random() * lowercaseLetters.length)
-            ]
-          );
-          newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        }
+
+        if (symbolsCheck.current?.checked) {
           newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
         }
+
+        // if (
+        //   uppercaseCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        // } else if (
+        //   lowercaseCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        // } else if (
+        //   numbersCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        // } else if (
+        //   symbolsCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked
+        // ) {
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   lowercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   lowercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        // } else if (
+        //   lowercaseCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !numbersCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   numbersCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked
+        // ) {
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   lowercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   !symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   lowercaseCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !numbersCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !lowercaseCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   lowercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   symbolsCheck.current?.checked &&
+        //   !uppercaseCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // } else if (
+        //   uppercaseCheck.current?.checked &&
+        //   lowercaseCheck.current?.checked &&
+        //   numbersCheck.current?.checked &&
+        //   symbolsCheck.current?.checked
+        // ) {
+        //   newArray.push(
+        //     uppercaseLetters[
+        //       Math.floor(Math.random() * uppercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(
+        //     lowercaseLetters[
+        //       Math.floor(Math.random() * lowercaseLetters.length)
+        //     ]
+        //   );
+        //   newArray.push(numbers[Math.floor(Math.random() * numbers.length)]);
+        //   newArray.push(symbols[Math.floor(Math.random() * symbols.length)]);
+        // }
       }
 
       let newPassword = shuffleArray(newArray).join("");
