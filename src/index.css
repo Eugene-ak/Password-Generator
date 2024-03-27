@@ -19,14 +19,14 @@
 }
 
 :root {
-  --app-background: #18171F;
-  --secondary-background: #817D92;
-  --card-background: #24232C;
-  --app-white: #E6E5EA;
-  --app-green: #A4FFAF;
-  --app-red: #F64A4A;
-  --app-orange: #FB7C58;
-  --app-yellow: #F8CD65;
+  --app-background: #18171f;
+  --secondary-background: #817d92;
+  --card-background: #24232c;
+  --app-white: #e6e5ea;
+  --app-green: #a4ffaf;
+  --app-red: #f64a4a;
+  --app-orange: #fb7c58;
+  --app-yellow: #f8cd65;
   --primary-font: JetBrainsMono;
   --bold-font: JetBrainsMono-Bold;
   --italic-font: JetBrainsMono-Italic;

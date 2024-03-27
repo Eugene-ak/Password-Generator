@@ -5,4 +5,4 @@ export const BottomSectionDiv = styled.div`
   color: var(--app-white);
   width: 100%;
   padding: 1rem 1.5rem;
-`
+`;

@@ -6,4 +6,4 @@ export const CopyIconStyle = styled.svg`
   &:hover > path {
     fill: var(--app-white);
   }
-`
+`;

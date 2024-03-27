@@ -24,7 +24,12 @@ export const RangeStyle = styled.input`
   -webkit-appearance: none;
   appearance: none;
   outline: none;
-  background-color: var(--app-background);
+  background: ${({ value }) =>
+    `linear-gradient(to right,
+    var(--app-green) 0%, 
+    var(--app-green) ${value * 5}%, 
+    var(--app-background) ${value * 5}%, 
+    var(--app-background) 100%)`};
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -36,17 +41,40 @@ export const RangeStyle = styled.input`
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    
-    &:hover, &:focus-visible {
+
+    &:hover,
+    &:focus-visible {
       background-color: var(--app-background);
       border: 3px solid var(--app-green);
     }
   }
-  
-  &:hover, &:focus-visible {
+
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--app-white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--app-background);
+      border: 3px solid var(--app-green);
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
     &::-webkit-slider-thumb {
       background-color: var(--app-background);
-      border: 3px solid var(--app-green); 
+      border: 3px solid var(--app-green);
+    }
+
+    &::-moz-range-thumb {
+      background-color: var(--app-background);
+      border: 3px solid var(--app-green);
     }
   }
 `;
@@ -54,4 +82,4 @@ export const RangeStyle = styled.input`
 export const RangeValueStyle = styled.span`
   color: var(--app-green);
   font-size: 1.5rem;
-`
+`;

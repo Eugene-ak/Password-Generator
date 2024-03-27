@@ -15,23 +15,20 @@ export const GenerateBtn = styled.button`
   justify-content: center;
   gap: 1rem;
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     background-color: transparent;
     border: 1px solid var(--app-green);
     color: var(--app-green);
     fill: var(--app-green);
     outline: none;
   }
-  
-  &:hover > svg {
-    /* filter: invert(10%); */
+
+  &:hover > svg > path {
     fill: var(--app-green);
-    filter: brightness(150%);
-    /* filter: saturate(100%); */
-    filter: hue-rotate(180deg);
   }
 `;
 
 export const GenerateText = styled.span`
   font-family: var(--bold-font);
-`
+`;
