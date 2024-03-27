@@ -28,7 +28,7 @@ export const RangeStyle = styled.input`
     `linear-gradient(to right,
     var(--app-green) 0%, 
     var(--app-green) ${value * 5}%, 
-    var(--app-background) ${value * 5}%, 
+    var(--app-background) ${value * 5}%,
     var(--app-background) 100%)`};
   border: none;
   border-radius: 0;
