@@ -9,6 +9,7 @@ export default function PasswordField({
   const passwordFieldValue: MutableRefObject<HTMLInputElement | null> =
     useRef(null);
 
+  // Make sure appropriate styles apply to the password field on every render
   useEffect(() => {
     if (passwordFieldValue.current) {
       if (passwordFieldValue.current.value === "P4$5W0rD!") {

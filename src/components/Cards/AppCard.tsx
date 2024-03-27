@@ -83,6 +83,7 @@ export default function AppCard() {
   const [rangeValue, setRangeValue] = useState<string | undefined>("0");
   const [checkedStateCount, setCheckedStateCount] = useState<number>(0);
 
+  // Function to update the range value
   const updateRangeValue = () => {
     setRangeValue(range.current?.value);
   };
@@ -98,6 +99,7 @@ export default function AppCard() {
     }
   };
 
+  // Shuffle the array
   function shuffleArray(array: string[]): string[] {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -106,11 +108,13 @@ export default function AppCard() {
     return array;
   }
 
+  // Generate password per conditions specified
   const generatePassword = () => {
     if (rangeValue !== undefined) {
       const passLength: number = parseInt(rangeValue);
       const newArray = [];
 
+      // Append items to array
       for (let i = 1; i <= passLength; i++) {
         if (uppercaseCheck.current?.checked) {
           newArray.push(
@@ -137,8 +141,10 @@ export default function AppCard() {
         }
       }
 
+      // Convert new password array to string
       let newPassword = shuffleArray(newArray).join("");
 
+      // Slice the password to be equal to the range specified
       if (newPassword.length > passLength) {
         newPassword = newPassword.slice(0, passLength).toString();
         setPassword(newPassword);

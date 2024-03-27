@@ -6,7 +6,7 @@ export const StyledHeader = styled.h4`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #817d92;
+  color: var(--secondary-background);
 
   @media screen and (max-width: 580px) {
     width: 343px;
