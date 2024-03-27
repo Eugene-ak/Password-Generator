@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type Props = {
+  value: number;
+};
+
 export const PassLengthStyle = styled.div`
   width: 100%;
   display: flex;
@@ -16,7 +20,7 @@ export const LengthDetails = styled.div`
   justify-content: space-between;
 `;
 
-export const RangeStyle = styled.input`
+export const RangeStyle = styled.input<Props>`
   width: 100%;
   height: 7px;
   margin-bottom: 2rem;
