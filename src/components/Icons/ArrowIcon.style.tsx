@@ -7,4 +7,4 @@ export const ArrowIconStyle = styled(CopyIconStyle)`
   &:hover > path {
     fill: var(--app-green);
   }
-`
+`;

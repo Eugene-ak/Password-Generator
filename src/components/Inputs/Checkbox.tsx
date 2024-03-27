@@ -11,7 +11,7 @@ export default function Checkbox({
   id,
   refValue,
   onChange,
-  text
+  text,
 }: {
   name: string;
   id: string;
@@ -29,9 +29,7 @@ export default function Checkbox({
           ref={refValue}
           onChange={onChange}
         />
-        <CheckboxLabel htmlFor={id}>
-          Include {text}
-        </CheckboxLabel>
+        <CheckboxLabel htmlFor={id}>Include {text}</CheckboxLabel>
       </CheckboxDiv>
     </CheckboxContainer>
   );

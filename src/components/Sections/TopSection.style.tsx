@@ -14,4 +14,4 @@ export const TopSectionDiv = styled.div`
   @media screen and (max-width: 580px) {
     padding: 1rem;
   }
-`
+`;

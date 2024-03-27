@@ -7,6 +7,7 @@ export const PasswordStyle = styled.input`
   padding: 0.5rem;
   background-color: transparent;
   color: var(--app-white);
+  font-family: var(--bold-font);
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -15,4 +16,4 @@ export const PasswordStyle = styled.input`
   @media screen and (max-width: 580px) {
     font-size: 1.1rem;
   }
-`
+`;
