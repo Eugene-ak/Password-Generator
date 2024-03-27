@@ -12,7 +12,7 @@ export default function PasswordLength({
   updateFunction,
 }: {
   range: MutableRefObject<HTMLInputElement | null>;
-  rangeValue: string | undefined;
+  rangeValue: number;
   updateFunction: VoidFunction;
 }) {
   return (

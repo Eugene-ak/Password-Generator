@@ -80,12 +80,16 @@ export default function AppCard() {
   const symbolsCheck = useRef<HTMLInputElement | null>(null);
 
   const [password, setPassword] = useState<string>("");
-  const [rangeValue, setRangeValue] = useState<string | undefined>("0");
+  const [rangeValue, setRangeValue] = useState<number>(0);
   const [checkedStateCount, setCheckedStateCount] = useState<number>(0);
 
   // Function to update the range value
   const updateRangeValue = () => {
-    setRangeValue(range.current?.value);
+    let value: number = 0;
+    if (range.current?.value) {
+    value = parseInt(range.current?.value);
+    }
+    setRangeValue(value);
   };
 
   // Function to determine strength state and type of values to include in password
@@ -111,7 +115,7 @@ export default function AppCard() {
   // Generate password per conditions specified
   const generatePassword = () => {
     if (rangeValue !== undefined) {
-      const passLength: number = parseInt(rangeValue);
+      const passLength: number = rangeValue;
       const newArray = [];
 
       // Append items to array
