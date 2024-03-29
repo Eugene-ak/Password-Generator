@@ -30,11 +30,9 @@ export const CheckboxStyle = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--app-background);
 
   &:hover,
-  &:active,
-  &:target,
   &:focus-visible {
     border: 1px solid var(--app-green);
     outline: none;
@@ -42,6 +40,7 @@ export const CheckboxStyle = styled.input`
 
   &:checked {
     background-color: var(--app-green);
+    color: var(--app-background);
     border: 1px solid var(--app-green);
   }
 
