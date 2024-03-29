@@ -46,6 +46,7 @@ export const CheckboxStyle = styled.input`
 
   &::after {
     content: url(${CheckIcon});
+    fill: var(--app-background);
     width: 100%;
     height: 100%;
   }
