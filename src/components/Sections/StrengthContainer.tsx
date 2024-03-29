@@ -5,15 +5,35 @@ import {
   StrengthText,
 } from "./StrengthContainer.style";
 
-export default function StrengthContainer({ count }: { count: number }) {
+export default function StrengthContainer({
+  count,
+  rangeValue,
+}: {
+  count: number;
+  rangeValue: number;
+}) {
   const value =
-    count === 1
+    rangeValue > 0 && rangeValue <= 4 && count >= 1 && count <= 4
       ? "Too Weak!"
-      : count === 2
+      : rangeValue === 5 && count >= 1 && count < 4
+      ? "Too Weak!"
+      : rangeValue === 5 && count === 4
       ? "Weak"
-      : count === 3
+      : rangeValue > 5 && rangeValue <= 7 && count === 3
+      ? "Weak"
+      : rangeValue > 5 && rangeValue <= 7 && count < 3
+      ? "Too Weak!"
+      : rangeValue > 5 && rangeValue <= 7 && count >= 1 && count <= 2
+      ? "Weak"
+      : rangeValue > 5 && rangeValue <= 7 && count === 4
       ? "Medium"
-      : count === 4
+      : rangeValue >= 8 && count === 1
+      ? "Too Weak!"
+      : rangeValue >= 8 && count === 2
+      ? "Weak"
+      : rangeValue >= 8 && count === 3
+      ? "Medium"
+      : rangeValue >= 8 && count === 4
       ? "Strong"
       : "";
 

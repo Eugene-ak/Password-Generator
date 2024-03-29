@@ -11,6 +11,7 @@ This is a solution to the [Password generator app challenge on Frontend Mentor](
   - [Running the app](#running-the-app)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Logic](#logic)
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
@@ -33,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub - https://github.com/Eugene-ak/Password-Generator.git](https://github.com/Eugene-ak/Password-Generator.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://password-generator-beige-nine.vercel.app/)
 
 ### Running the app
 
@@ -49,6 +50,31 @@ To build the application for production mode, use `npm run build`
 - [Vite](https://vitejs.dev/guide/) - Framework
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
+
+### Logic
+
+The app determines the strength state of the password based on the following conditions:
+
+- If the length of the password is 4 characters or less, the password becomes `too weak`.
+
+- If the password is 5 characters long, the following applies:
+  - If the type of characters to include is 3 or less, the password strength is `too weak`.
+  - On the other hand, if the type of characters to include is more than 3, the password strength is `weak`. This is better than `too weak`.
+
+- If the password to be generated is 6 or 7 characters long, the following applies:
+  - If the type of characters to include is 2 or less, the password strength will be `too weak`.
+  - If the type of characters to include is 3, the password strength will be `weak`.
+  - If all four types of characters are to be included, it will have a `medium` strength.
+
+- If the length of characters is 8 and above (maximum of 20), the following applies:
+  - If the type of characters to include is only 1, the strength is `too weak`.
+  - If the type of characters to include is 2, the strength is `weak`.
+  - If the type of characters to include is 3, the strength is `medium`.
+  - If all 4 types are selected, the strength is `strong`.
+
+The hierarchy of strength states in ascending order is `too weak` > `weak` > `medium` > `strong`.
+
+#### NB: When a length of 0 or none of the checkboxes are checked, no password will be generated.
 
 ### What I learned
 

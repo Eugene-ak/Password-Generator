@@ -197,7 +197,7 @@ export default function AppCard() {
           onChange={() => updateCheckCount(symbolsCheck)}
           text="Symbols"
         />
-        <StrengthContainer count={checkedStateCount} />
+        <StrengthContainer count={checkedStateCount} rangeValue={rangeValue} />
         <GenerateButton onClick={generatePassword} />
       </BottomSectionDiv>
     </StyledCard>
