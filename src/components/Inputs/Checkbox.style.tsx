@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import CheckIcon from "/icon-check.svg";
-// import CheckIcon from "../Icons/CheckIcon";
 
 export const CheckboxContainer = styled.div`
   width: 100%;
