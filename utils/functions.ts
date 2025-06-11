@@ -111,7 +111,7 @@ export const generatePassword = (
   setPassword: (password: string) => void
 ) => {
   if (rangeValue < 4) {
-    toast.info("Please select a password length of at least 4 characters.");
+    toast.warning("Please select a password length of at least 4 characters.");
     return;
   }
 
@@ -121,7 +121,7 @@ export const generatePassword = (
     !numbersCheck.current?.checked &&
     !symbolsCheck.current?.checked
   ) {
-    toast.info("Please select at least one character type.");
+    toast.warning("Please select at least one character type.");
     return;
   }
 
